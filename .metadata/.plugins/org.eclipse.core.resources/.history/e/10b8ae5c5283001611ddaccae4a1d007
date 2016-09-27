@@ -1,0 +1,48 @@
+package com.danielgm.thread;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
+
+public class ThreadSample {
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader bi = new BufferedReader(new InputStreamReader(System.in));
+		String read;
+		while((read=bi.readLine())!= null){
+			System.out.println(read);
+		}
+	}
+
+}
+
+
+
+class TaskExecutor implements Runnable {
+	
+	Operation operation;
+	List valueConcurrent;
+	
+	
+	public TaskExecutor(List valueConcurrent,Operation operation) {
+		this.valueConcurrent = valueConcurrent;
+	}
+	
+	public void run() {
+		switch (operation) {
+		case ADD:
+			
+			break;
+
+		default:
+			break;
+		}
+		
+	}
+}
+
+enum Operation{
+	ADD,REMOVE,REMOVEALL
+}
