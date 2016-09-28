@@ -22,7 +22,7 @@ public class FutureSample {
 	};
 		
 		ExecutorService executor = Executors.newFixedThreadPool(1);
-		Future<Integer> future = executor.submit(task);
+		Future<Integer> future = executor. submit(task);
 
 		System.out.println("future done? " + future.isDone());
 
